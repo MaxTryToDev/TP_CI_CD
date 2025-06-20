@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint . --ext .js,.ts",
+    "build": "echo \"pas de build nécessaire\"",
+    "lint": "eslint .",
     "test": "jest",
     "test:e2e": "playwright test"
   },
@@ -25,7 +25,6 @@
     "eslint": "^9.29.0",
     "jest": "^30.0.2",
     "playwright": "^1.53.1",
-    "ts-jest": "^29.4.0",
-    "typescript": "^5.8.3"
+    "ts-jest": "^29.4.0"
   }
 }
