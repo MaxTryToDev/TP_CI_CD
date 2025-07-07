@@ -1,11 +1,12 @@
 {
   "name": "tp_ci_cd",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "echo \"pas de build nécessaire\"",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:e2e": "playwright test"
   },
   "repository": {
@@ -19,6 +20,13 @@
   },
   "homepage": "https://github.com/MaxTryToDev/TP_CI_CD#readme",
   "description": "",
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/"
+    ]
+  },
   "devDependencies": {
     "@playwright/test": "^1.53.1",
     "@types/jest": "^30.0.0",
